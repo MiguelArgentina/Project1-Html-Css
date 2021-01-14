@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Space Ripples Reveal Big Bang’s Smoking Gun - nytimes.com</title>
   </head>
 
@@ -433,6 +434,7 @@
 
     <section class="art-nav">
       <button type="button" name="button" class="top-nav-bttn">READ 615 COMMENTS</button>
+
       <nav>
         <a class="soc-media" href="#"><img src="./assets/facebook.png" width="20" alt="Facebook"></a>
         <a class="soc-media" href="#"><img src="./assets/twitter.png" width="20" alt="Twitter"></a>
@@ -440,6 +442,56 @@
         <a class="soc-media" href="#"><img src="./assets/forward-arrow.png" width="20" alt="Forward arrow"></a>
       </nav>
     </section>
+
+    <section class="sect-article-rating">
+  <div class="rat-title">What is your overall opinion about this article?</div>
+  <div class="rat-thumbs">
+
+    <div class="rat-thumbs-item">
+    <label for="positive-rating">Positive<br><i class="material-icons nyt-color">star</i></label>
+    <input type="radio" id="positive-rating" name="rating" value="positive-rating" checked>
+    </div>
+
+    <div class="rat-thumbs-item">
+    <label for="neutral-rating">Neutral<br><i class="material-icons nyt-color">star_half</i></label>
+    <input type="radio" id="neutral-rating" name="rating" value="neutral-rating">
+    </div>
+
+    <div class="rat-thumbs-item">
+    <label for="negative-rating">Negative<br><i class="material-icons nyt-color">star_border</i></label>
+    <input type="radio" id="negative-rating" name="rating" value="negative-rating">
+    </div>
+
+  </div>
+</section>
+
+<section class="sect-comments">
+  <div>Want to comment this article?</div>
+  <form action="/user-comments" method="POST">
+    <ul>
+      <li>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name" maxlength="20" required>
+      </li>
+      <li>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email" placeholder="mail@mail.com" maxlength="20" required>
+      </li>
+      <li>
+        <label for="msg">Comment:</label>
+        <textarea id="msg" name="user_message" placeholder="Type your comment here…" rows="5" maxlength="250" required></textarea>
+      </li>
+    </ul>
+    <div class="subscribe-container">
+      <label for="subscribe">I want to subscribe to the newsletter</label>
+      <input type="checkbox" id="subscribe" checked>
+    </div>
+
+    <button class="snd-cmmnt-but" type="submit">Send comment</button>
+  </form>
+</section>
+
+
 
     <section class="additional-topics">
 
